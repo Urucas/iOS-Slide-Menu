@@ -33,7 +33,7 @@
 
 - (BOOL)slideNavigationControllerShouldDisplayRightMenu
 {
-	return YES;
+	return NO;
 }
 
 #pragma mark - IBActions -

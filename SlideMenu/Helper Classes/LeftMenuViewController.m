@@ -30,8 +30,6 @@
 	
 	self.tableView.separatorColor = [UIColor lightGrayColor];
 	
-	UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"leftMenu.jpg"]];
-	self.tableView.backgroundView = imageView;
 }
 
 #pragma mark - UITableView Delegate & Datasrouce -
@@ -85,7 +83,6 @@
 {
 	UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone"
 															 bundle: nil];
-	
 	UIViewController *vc ;
 	
 	switch (indexPath.row)
