@@ -55,24 +55,12 @@
 {
 	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"leftMenuCell"];
 	
-	switch (indexPath.row)
-	{
+	switch (indexPath.row) {
 		case 0:
 			cell.textLabel.text = @"Home";
 			break;
 			
-		case 1:
-			cell.textLabel.text = @"Profile";
-			break;
-			
-		case 2:
-			cell.textLabel.text = @"Friends";
-			break;
-			
-		case 3:
-			cell.textLabel.text = @"Sign Out";
-			break;
-	}
+    }
 	
 	cell.backgroundColor = [UIColor clearColor];
 	
@@ -90,25 +78,13 @@
 		case 0:
 			vc = [mainStoryboard instantiateViewControllerWithIdentifier: @"HomeViewController"];
 			break;
-			
-		case 1:
-			vc = [mainStoryboard instantiateViewControllerWithIdentifier: @"ProfileViewController"];
-			break;
-			
-		case 2:
-			vc = [mainStoryboard instantiateViewControllerWithIdentifier: @"FriendsViewController"];
-			break;
-			
-		case 3:
-			[self.tableView deselectRowAtIndexPath:[self.tableView indexPathForSelectedRow] animated:YES];
-			[[SlideNavigationController sharedInstance] popToRootViewControllerAnimated:YES];
-			return;
-			break;
+		
 	}
 	
 	[[SlideNavigationController sharedInstance] popToRootAndSwitchToViewController:vc
-															 withSlideOutAnimation:self.slideOutAnimationEnabled
-																	 andCompletion:nil];
+        withSlideOutAnimation:self.slideOutAnimationEnabled
+        andCompletion:nil
+     ];
 }
 
 @end
